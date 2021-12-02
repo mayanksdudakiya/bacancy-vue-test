@@ -5,11 +5,15 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "watch": "vue-cli-service serve --watch"
   },
   "dependencies": {
+    "axios": "^0.24.0",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "lodash": "^4.17.21",
+    "vue": "^2.6.11",
+    "vue-good-table": "^2.21.11"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

@@ -1,17 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <GithubSearch @githubusers="searchResults($event)"/>
+    <GithubResults :results="results"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import GithubSearch from './components/GithubSearch.vue'
+import GithubResults from './components/GithubResults.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    GithubSearch,
+    GithubResults
+  },
+  data() {
+    return {
+        results: ''
+    }
+  },
+  methods: {
+    searchResults(response) {
+      this.results = response;
+    },
   }
 }
 </script>
